@@ -48,6 +48,7 @@ section{padding:clamp(40px,7vw,72px) 0}
 .schedule div.optional{background:var(--lilac)}
 .schedule dt{width:140px;flex-shrink:0;font-weight:700}
 .schedule dd{margin:0}
+.schedule.emoji dt{width:32px;font-size:22px;line-height:1.3}
 .venue{background:var(--cream)}
 .venue .wrap{display:flex;flex-direction:column;gap:28px}
 .photos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px}
@@ -66,6 +67,18 @@ section{padding:clamp(40px,7vw,72px) 0}
 .closing .buttons{display:flex;gap:14px;flex-shrink:0;flex-wrap:wrap}
 .btn-light{background:var(--yellow);color:var(--text)}.btn-light:hover{background:#fff;color:var(--text)}
 .btn-outline{border:2px solid var(--yellow);color:var(--cream)}.btn-outline:hover{background:var(--rose-dark);color:var(--cream)}
+.organiser-body{display:flex;gap:36px;align-items:flex-start;margin-top:28px;font-size:18px}
+.organiser-body img{width:220px;height:220px;border-radius:50%;object-fit:cover;flex-shrink:0}
+.organiser-body p{margin:0 0 10px}.organiser-name{font-weight:700;font-size:22px;color:var(--rose)}
+.volunteers{background:var(--cream)}
+.vol-lead{font-size:18px;margin:12px 0 0}
+.vol-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:28px}
+.vol-grid figure{margin:0;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+.vol-grid img{width:160px;height:160px;border-radius:50%;object-fit:cover}
+.vol-grid figcaption{display:flex;flex-direction:column;gap:2px;font-size:17px}
+.vol-grid figcaption span{font-size:15px;color:var(--rose-dark)}
+.vol-grid figcaption p{margin:8px 0 0;font-size:16px;text-align:left;line-height:1.7}
+.vol-grid figure{justify-content:flex-start}
 footer{padding:28px 0;font-size:14px;color:var(--rose-dark)}
 @media (max-width:760px){
 .hero .wrap{flex-direction:column;text-align:center;gap:20px}
@@ -73,11 +86,14 @@ footer{padding:28px 0;font-size:14px;color:var(--rose-dark)}
 .hero-text{align-items:center}.lead{text-align:left}
 .flow .wrap{flex-direction:column;gap:20px}.flow-intro{width:auto;font-size:17px}
 .schedule div{flex-direction:column;gap:2px;padding:12px 16px;font-size:16px}
+.schedule.emoji div{flex-direction:row;gap:14px}
 .photos{grid-template-columns:1fr;gap:20px}.photos img{height:auto;max-height:420px}
 .address{font-size:16px}.address .name{font-size:18px}
 .faq-grid{grid-template-columns:1fr;font-size:16px}
 .closing .wrap{flex-direction:column;text-align:center}
 .closing .buttons{justify-content:center}
+.vol-grid{grid-template-columns:1fr;gap:24px}.vol-grid figure{flex-direction:row;align-items:flex-start;text-align:left;gap:16px}.vol-grid img{width:96px;height:96px;flex-shrink:0}.vol-grid figcaption{font-size:16px}.vol-grid figcaption p{font-size:15px;margin-top:4px}
+.organiser-body{flex-direction:column;align-items:center;font-size:16px}.organiser-body img{width:160px;height:160px}
 }
 </style>
 </head>
@@ -96,16 +112,16 @@ footer{padding:28px 0;font-size:14px;color:var(--rose-dark)}
 </div></section>
 
 <section class="flow"><div class="wrap">
-<div class="flow-intro"><h2>当日の流れ</h2><p style="margin:0">毎週木曜日。英会話は18:00まで。そのあとの夕食とバイブルスタディは自由参加です。</p></div>
-<dl class="schedule">
-<div><dt>17:00前</dt><dd>受付（Mountain St側の入口。受付のNathan(ネイサン)に声をかけてね）</dd></div>
-<div><dt>17:00〜17:10</dt><dd>アイスブレイク</dd></div>
-<div><dt>17:10〜17:15</dt><dd>お知らせ・今日のトピック紹介・ペア分け</dd></div>
-<div><dt>17:15〜17:50</dt><dd>マンツーマン英会話</dd></div>
-<div><dt>17:50〜18:00</dt><dd>英語の読み練習：バイブルの一節を読んで話し合おう</dd></div>
-<div><dt>18:00</dt><dd><strong>英会話終了。ここで帰ってもOK！</strong></dd></div>
-<div class="optional"><dt>18:00〜18:30</dt><dd>夕食（自由参加。初回無料、2回目から$14）</dd></div>
-<div class="optional"><dt>18:30〜20:00</dt><dd>バイブルスタディ（自由参加。日本語と英語でバイブルを読む会）</dd></div>
+<div class="flow-intro"><h2>当日の流れ</h2><p style="margin:0">毎週木曜 17:00〜18:00｜参加無料。決まった時間割ではなく、その日の様子に合わせてゆっくり進めます。</p><p style="margin:0">話すのが不安なら、最初は聞くだけでもOK。初めての方も、久しぶりの方も大歓迎！</p></div>
+<dl class="schedule emoji">
+<div><dt>🚪</dt><dd>16:50から Mountain St側のドアの前で、ネイサンかリアンが待っています</dd></div>
+<div><dt>☕️</dt><dd>自己紹介・おしゃべりタイム（お互いを知る時間）</dd></div>
+<div><dt>🎲</dt><dd>今週のテーマでゲームやアクティビティ</dd></div>
+<div><dt>💬</dt><dd>英語ネイティブとマンツーマンでおしゃべり</dd></div>
+<div><dt>📖</dt><dd>最後に、英語の読み練習：バイブルの短い一節を読んで話し合おう（10分以内）</dd></div>
+<div><dt>👋</dt><dd><strong>18:00 英会話終了。ここで帰ってもOK！</strong></dd></div>
+<div class="optional"><dt>🍛</dt><dd>夕食（自由参加。初回無料、2回目から$14）</dd></div>
+<div class="optional"><dt>📚</dt><dd>バイブルスタディ（自由参加。日本語と英語でバイブルを読む会）</dd></div>
 </dl>
 </div></section>
 
@@ -117,9 +133,34 @@ footer{padding:28px 0;font-size:14px;color:var(--rose-dark)}
 </div>
 <div class="address">
 <div class="name">St Barnabas' Anglican Church Broadway　<a href="https://www.google.com/maps/search/?api=1&amp;query=57-61+Mountain+St+Ultimo+NSW+2007" target="_blank" rel="noopener">57-61 Mountain St, Ultimo NSW 2007</a></div>
+<div>St Barnabas'はプロテスタントの教会です。地域の役に立ちたいという思いから、私たちのようなグループに場所を使わせてくださっています。</div>
 <div>Broadway側の入口は夜は閉まっているので、Mountain St側の入口からお入りください。</div>
 <div><strong>セントラル駅から（徒歩約15分）：</strong>Broadwayを西へ歩き、Mountain Stを右に曲がってすぐです。</div>
 <div><strong>シドニー大学から：</strong>City Rd〜Broadwayを東へ進み、Mountain Stを左に曲がってください。</div>
+</div>
+</div></section>
+
+<section class="organiser"><div class="wrap">
+<h2>主催者の紹介</h2>
+<div class="organiser-body">
+<img src="images/riaan.jpg" alt="主催者のリアン">
+<div>
+<p class="organiser-name">リアン（Riaan）</p>
+<p>はじめまして、リアンです。Kizuna英会話を始めました。OMFというクリスチャンの団体で働いていて、2020年に日本に引っ越し、4年間住んでいました。</p>
+<p>初めて日本に行った時は日本語が全く分からず、札幌での2年間は、ほとんどの時間を日本語の勉強に使いました。素晴らしい先生たちに恵まれましたが、自然に、ストレスなく日本語を練習できる場所や、人の目を気にせずに自分の悩みを話せる場所は、なかなか見つかりませんでした。</p>
+<p>シドニーに戻ってきて、あの時の自分がほしかった場所を、今度は日本人の皆さんのために作りたいと思いました。英語を気軽に練習できて、悩みも安心して話せる場所です。まだ始まったばかりの小さなグループですが、だからこそ一人ひとりとゆっくり話せます。そんな場所を、一緒につくっていきませんか？</p>
+<p>出身は南アフリカで、シドニーに住んで16年ちょっとになります。サーフィン、ゲーム、海沿いのきれいな道を歩くのが好きです。結婚して20年以上になり、妻とゴードンに住んでいます。</p>
+</div>
+</div>
+</div></section>
+
+<section class="volunteers"><div class="wrap">
+<h2>ボランティアの紹介</h2>
+<p class="vol-lead">毎週木曜日に待っている仲間です。</p>
+<div class="vol-grid">
+<figure><img src="images/nathan.jpg" alt="ボランティアのネイサン" loading="lazy"><figcaption><strong>ネイサン（Nathan）</strong><span>ドアでお出迎え</span><p>こんにちは！ネイサンといいます。シドニー大学で情報工学と日本語を専攻し、昨年卒業しました。現在は就職活動中です。趣味はバレーボールやアルティメットをすること、そしていろいろな音楽を聴いたり楽器を弾いたりすることです。よろしくお願いします！</p></figcaption></figure>
+<figure><img src="images/adrian.jpg" alt="ボランティアのエイドリアン" loading="lazy"><figcaption><strong>エイドリアン（Adrian）</strong><p>はじめまして、エイドリアンです。ソフトウェアの仕事をしていて、趣味は音楽です！ピアノを弾いて、バンドでJポップやアニソンを演奏します。</p></figcaption></figure>
+<figure><img src="images/alex.jpg" alt="ボランティアのアレックス" loading="lazy"><figcaption><strong>アレックス（Alex）</strong><p>こんにちは、アレックスです。現在はシドニー大学の学生です。趣味は、友達とバスケすることと、登山です。</p></figcaption></figure>
 </div>
 </div></section>
 
@@ -128,10 +169,10 @@ footer{padding:28px 0;font-size:14px;color:var(--rose-dark)}
 <div class="faq-grid">
 <div><h3>英語に自信がないけど大丈夫？</h3><p>大丈夫です。一対一なので自分のペースで話せます。間違えても誰も気にしません。</p></div>
 <div><h3>本当に無料？</h3><p>英会話は無料です。夕食は自由参加で、初回無料、2回目から$14です。</p></div>
-<div><h3>宗教の勧誘はありますか？</h3><p>私たちはイエス・キリストを信じるクリスチャンのグループです。英会話の中で、英語の読み練習としてバイブルの短い一節を一緒に読んで話し合います（10分ほど）。バイブルは世界で一番売れている本で、ノアの箱舟など有名なお話もたくさん入っています。夕食とバイブルスタディは希望者だけで、無理に誘うことはありません。</p></div>
+<div><h3>宗教の勧誘はありますか？</h3><p>私たちはイエス・キリストを信じるクリスチャンのグループです。英会話の最後に、英語の読み練習としてバイブルの短い一節を一緒に読んで話し合います（10分以内）。バイブルは世界で一番売れている本で、ノアの箱舟など有名なお話もたくさん入っています。夕食とバイブルスタディは希望者だけで、無理に誘うことはありません。</p></div>
 <div><h3>毎週参加しないといけない？</h3><p>いいえ。来られる日だけ予約してください。</p></div>
 <div><h3>友達と一緒でもいい？</h3><p>もちろん！お友達もそれぞれ予約してね。お友達には <a href="https://linktr.ee/kizunaeikaiwa" target="_blank" rel="noopener">linktr.ee/kizunaeikaiwa</a> を教えてあげてください。</p></div>
-<div><h3>遅れそう・行けなくなったら？</h3><p>リマインドのSMSか確認メールに返信してください。WhatsAppグループに入っている方は、WhatsAppで知らせてもOKです。</p></div>
+<div><h3>遅れそう・行けなくなったら？</h3><p>確認メールに返信してください。WhatsAppグループに入っている方は、WhatsAppで知らせてもOKです。</p></div>
 <div><h3>何を持っていけばいい？</h3><p>手ぶらでOKです。</p></div>
 </div>
 </div></section>
